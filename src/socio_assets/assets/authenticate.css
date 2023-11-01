@@ -1,0 +1,136 @@
+:root{
+    --black:#060608;
+    --white:#fdfdfd;
+    --red: #ff0000;
+    --light-red: #ff9c00;
+}
+.body{
+    margin: 0;
+    padding: 0;
+    width: 99vw;
+    height: 99vh;
+    margin-left: 0.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Authenticate{
+    width: 90vw;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Authenticate-body{
+    width: 80%;
+    height: 80%;
+    display: flex;
+}
+
+.Socio-logo{
+    width: 50%;
+}
+.Auth-container{
+    align-items: center;
+    border: solid 1px var(--white);
+    border-radius: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.Toggle-buttons{
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: solid 3px var(--light-red);
+    border-bottom: solid 1px var(--white);
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+    margin-bottom: 0;
+    width: 90%;
+    height: max-content;
+}
+
+.Toggle-buttons p{
+    display: flex;
+    font-size: 1.9vw;
+    justify-content: center;
+    margin: 0;
+    width: 50%;
+}
+
+.Form{
+    background-color: var(--white);
+    border: solid 3px var(--light-red);
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    height: 82%;
+}
+
+input{
+    border: none;
+    border-bottom: solid 2px var(--white);
+    border-radius: 10px;
+    background-color: #060608;
+    color: var(--white);
+    font-size: 1.2vw;
+    width: 90%;
+    height: 13%;
+    margin: 5% 0;
+    outline: none;
+}
+
+input::placeholder{
+    color: var(--white);
+    font-size: 1.2vw;
+    opacity: 0.8;
+}
+
+input:focus{
+    border-bottom: solid 5px var(--light-red);
+    transition: 0.1s ease-in;
+}
+
+button{
+    background-color: var(--light-red);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2vw;
+    width: 85%;
+    height: 10%;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--black);
+    color: var(--light-red);
+}
+
+a{
+    color: var(--black);
+    font-weight: 500;
+    margin: 5% 0;
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--light-red);
+}
+
+.active{
+    background-color: var(--white);
+    color: var(--black);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
