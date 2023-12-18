@@ -1,4 +1,31 @@
+type Messages = 
+ opt record {
+       Message;
+       List;
+     };
+type Message = 
+ record {
+   id: text;
+   message: text;
+   sender: text;
+ };
+type List = 
+ opt record {
+       Message;
+       List;
+     };
+type Chats = record {messages: Messages;};
 service : {
+  addFriend: (text, text) -> (text);
+  addMessage: (text, text, Message) -> (opt Chats);
   checkUser: (text, text) -> (text) query;
-  createUser: (text, text) -> (text);
+  createUser: (text, text, text) -> (text);
+  getDP: (text) -> (text) query;
+  getFriendsList: (text) -> (vec text) query;
+  getMessages: (text, text) -> (vec Message) query;
+  getPublicUsers: () -> (vec text);
+  getUserID: (text) -> (text);
+  noBond: (text, text) -> (text);
+  removeFriend: (text, text) -> (text);
+  wipeData: () -> (text);
 }

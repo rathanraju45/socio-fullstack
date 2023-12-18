@@ -1,18 +1,20 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { useState } from "react";
 import Authenticate from "./components/Authenticate/Authenticate";
 import Chatpage from "./components/chatpage/Chatpage";
 
-function App(){
+function App(props) {
+    
+    const [isLoggedin, setIsLoggedin] = useState("false");
+
+    const [user, setUser] = useState("");
+
     return (
-        <Router>
-            <div className="App">
-                <Routes>
-                    <Route path="/" Component={Authenticate}/>
-                    <Route path="/l" Component={Chatpage} />
-                </Routes>
-            </div>
-        </Router>
+        <div className="App">
+            {
+                isLoggedin === 'true' ? <Chatpage user={user} /> : <Authenticate onLogin={setIsLoggedin} getUser={setUser} />
+            }
+            {/* <Chatpage user="rathan" /> */}
+        </div>
     );
 }
 

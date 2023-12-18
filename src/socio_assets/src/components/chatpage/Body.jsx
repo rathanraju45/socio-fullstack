@@ -3,7 +3,9 @@ import Sidenav from "../global/Sidenav";
 import Chatlist from "./Chatlist";
 import Chatcontainer from "./Chatcontainer";
 
-export default function Body(){
+export default function Body(props) {
+    
+    let [activeChat, setActiveChat] = useState("none");
 
     const [hovered, setHovered] = useState(false);
 
@@ -18,8 +20,8 @@ export default function Body(){
     return (
         <div className="Body">
             <Sidenav onMouseEnter={MouseHovered} onMouseLeave={MouseLeft} width={hovered ? '10%' : '3%'} hovered={hovered} page="Chat" />
-            <Chatlist />
-            <Chatcontainer />
+            <Chatlist userName={props.userName} activeChat={activeChat} setActiveChat={ setActiveChat } />
+            <Chatcontainer userName={props.userName} activeChat={activeChat} sender={ props.userName } />
         </div>
     )
 }

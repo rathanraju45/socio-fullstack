@@ -1,4 +1,0 @@
-service : {
-  checkUser: (text, text) -> (text) query;
-  createUser: (text, text) -> ();
-}

@@ -1,0 +1,12 @@
+// Version: 1.0.0
+type Chats = {messages : Messages};
+type List<T> = ?(T, List<T>);
+type Message = {id : Text; message : Text; sender : Text};
+type Messages = List<Message>;
+type User =
+  {friendList : List<Text>; id : Text; password : Text; profilepic : Text};
+actor {
+  stable var chatListEntries : [(Text, Chats)];
+  stable var userListEntries : [(Text, User)];
+  stable var userPool : ?(Text, List<Text>)
+};

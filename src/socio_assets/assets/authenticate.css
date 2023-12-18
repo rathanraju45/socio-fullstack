@@ -102,7 +102,7 @@ input:focus{
     transition: 0.1s ease-in;
 }
 
-button{
+.auth-btn{
     background-color: var(--light-red);
     border: none;
     border-radius: 10px;
@@ -112,7 +112,7 @@ button{
     cursor: pointer;
 }
 
-button:hover{
+.auth-btn:hover{
     background-color: var(--black);
     color: var(--light-red);
 }
@@ -133,4 +133,71 @@ a:hover{
     color: var(--black);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+@media only screen and (max-width: 767px){
+
+    .body{
+        height: 90vh;
+        display: block;
+    }    
+
+    .Authenticate{
+        width: 100%;
+    }
+
+    .Authenticate-body{
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Socio-logo img{
+        width: 40vw;
+        height: 40vw;
+        margin-left: 10vw;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+
+    .Auth-container{
+        margin: auto auto;
+        position: absolute;
+        top: 40vw;
+        width: 95%;
+        height: 60%;
+    }
+
+    .Toggle-buttons p{
+        font-size: 8vw;
+    }
+
+    input{
+        height: 20%;
+        font-size: 5vw;
+    }
+
+    input::placeholder{
+        font-size: 5vw;
+    }
+
+    .auth-btn{
+        height: 13%;
+        font-size: 7vw;
+    }
+
+    a{
+        font-size: 5.5vw;
+    }
+
+    .Form p{
+        position: absolute !important;
+        top: 110% !important;
+        left: 0 !important;
+        font-size: 5.5vw !important;
+        width: max-content !important;
+    }
+    
 }
